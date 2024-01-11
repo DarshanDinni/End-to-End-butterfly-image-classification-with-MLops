@@ -8,16 +8,11 @@ The training dataset, encapsulated in Training_set.csv, contains labeled images 
 
 This project aims to develop a robust machine learning model capable of accurately classifying butterfly species based on images.
 
-## Badges
-
-[![Build Status](...)](...)
-[![License: MIT](...)](...)
-
 ## Table of Contents
 - [Title and Overview](#butterfly-image-classifier)
-- [Badges](#badges)
 - [Table of Contents](#table-of-contents)
 - [Installation](#installation)
+- [Components](#components)
 - [Usage](#usage)
 - [Contribution](#contribution)
 - [License](#license)
@@ -35,6 +30,14 @@ This project aims to develop a robust machine learning model capable of accurate
     ```
     pip3 install -r requirements.txt --index-url https://download.pytorch.org/whl/cu118
     ```
+3. **Run the project:**
+    ```
+    python main.py
+    ```
+
+## Components
+### 1. Data Ingestion
+
 
 ## Usage
 

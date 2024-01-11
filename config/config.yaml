@@ -1,0 +1,6 @@
+artifact_root: artifacts
+
+data_ingestion:
+  root_dir: artifacts/data_ingestion
+  source_url: https://www.kaggle.com/datasets/phucthaiv02/butterfly-image-classification/data
+  local_data_file: artifacts/data_ingestion
