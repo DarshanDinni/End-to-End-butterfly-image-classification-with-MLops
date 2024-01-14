@@ -10,6 +10,7 @@ from ensure import ensure_annotations
 from butterflyClassifier.exception_handling import CustomException
 from butterflyClassifier.logger import logging
 
+
 @ensure_annotations
 def read_yaml(yaml_file_path: Path) -> ConfigBox:
     """
@@ -30,6 +31,7 @@ def read_yaml(yaml_file_path: Path) -> ConfigBox:
     except Exception as e:
         # Handle other exceptions and raise a custom exception
         raise CustomException(e, sys)
+
 
 @ensure_annotations
 def create_directories(path_to_directories: list, verbose=True):

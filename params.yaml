@@ -1,1 +1,2 @@
-key: val
+TEST_SIZE: 0.3
+RANDOM_STATE: 42

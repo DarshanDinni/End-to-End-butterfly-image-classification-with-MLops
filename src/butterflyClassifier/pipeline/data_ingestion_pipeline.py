@@ -5,6 +5,7 @@ from butterflyClassifier.logger import logging
 
 STAGE_NAME = "Data Ingestion Stage"
 
+
 class DataIngesionPipeline:
     def __init__(self) -> None:
         pass
