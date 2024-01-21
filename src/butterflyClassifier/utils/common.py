@@ -1,14 +1,15 @@
+import logging
 import os
 import sys
 from pathlib import Path
 
+import torch
 import yaml
 from box import ConfigBox
 from box.exceptions import BoxValueError
 from ensure import ensure_annotations
 
 from butterflyClassifier.exception_handling import CustomException
-from butterflyClassifier.logger import logging
 
 
 @ensure_annotations
@@ -46,3 +47,20 @@ def create_directories(path_to_directories: list, verbose=True):
         os.makedirs(path, exist_ok=True)
         if verbose:
             logging.info(f"created directory at: {path}")
+
+
+@ensure_annotations
+def accuracy_fn(y_true, y_pred):
+    """
+    Calculates accuracy between truth labels and predictions.
+
+    Args:
+        y_true (torch.Tensor): Truth labels for predictions.
+        y_pred (torch.Tensor): Prediction done by the model.
+
+    Returns:
+        [torch.float]: Accuracy value between y_true and y_pred
+    """
+    correct = torch.eq(y_true, y_pred).sum().item()
+    acc = (correct / len(y_pred)) * 100
+    return acc

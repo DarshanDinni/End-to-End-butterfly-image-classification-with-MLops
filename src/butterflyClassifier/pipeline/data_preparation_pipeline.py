@@ -1,9 +1,9 @@
+import logging
 import sys
 
 from butterflyClassifier.components.data_preparation import DataPreparation
 from butterflyClassifier.config.configuration import ConfigurationManager
 from butterflyClassifier.exception_handling import CustomException
-from butterflyClassifier.logger import logging
 
 STAGE_NAME = "Data Preparation Stage"
 

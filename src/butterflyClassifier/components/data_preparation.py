@@ -1,3 +1,4 @@
+import logging
 import os
 import shutil
 import sys
@@ -7,7 +8,6 @@ from sklearn.model_selection import train_test_split
 
 from butterflyClassifier.entity.config_entity import *
 from butterflyClassifier.exception_handling import CustomException
-from butterflyClassifier.logger import logging
 
 
 class DataPreparation:
