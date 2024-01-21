@@ -9,9 +9,13 @@ data_preparation:
   root_path: artifacts/data_preparation
   train_csv_path: artifacts/data_ingestion/butterfly-image-classification/Training_set.csv
   test_csv_path: artifacts/data_ingestion/butterfly-image-classification/Testing_set.csv
-  train_images_path: artifacts/data_ingestion/butterfly-image-classification/train/
-  test_images_path: artifacts/data_ingestion/butterfly-image-classification/test/
-  train_output_image_path: artifacts/data_preparation/train/
-  validation_output_image_path: artifacts/data_preparation/validation/
+  train_images_path: artifacts/data_ingestion/butterfly-image-classification/train
+  test_images_path: artifacts/data_ingestion/butterfly-image-classification/test
+  train_output_image_path: artifacts/data_preparation/train
+  validation_output_image_path: artifacts/data_preparation/validation
   train_output_csv_path: artifacts/data_preparation/train.csv
   validation_output_csv_path: artifacts/data_preparation/validation.csv
+
+train:
+  model_root_dir: artifacts/models
+  trained_model_path: artifacts/models/model.pth

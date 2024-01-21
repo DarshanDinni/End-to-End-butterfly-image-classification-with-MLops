@@ -1,3 +1,4 @@
+import logging
 import os
 import subprocess
 import sys
@@ -6,7 +7,6 @@ import opendatasets as od
 
 from butterflyClassifier.entity.config_entity import DataIngestionConfig
 from butterflyClassifier.exception_handling import CustomException
-from butterflyClassifier.logger import logging
 
 
 class DataIngestion:

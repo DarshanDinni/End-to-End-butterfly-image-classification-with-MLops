@@ -1,7 +1,8 @@
+import logging
+
 from butterflyClassifier.components.data_ingestion import DataIngestion
 from butterflyClassifier.config.configuration import ConfigurationManager
 from butterflyClassifier.exception_handling import CustomException
-from butterflyClassifier.logger import logging
 
 STAGE_NAME = "Data Ingestion Stage"
 

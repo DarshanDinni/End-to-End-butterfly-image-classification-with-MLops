@@ -25,11 +25,11 @@ class DataPreparationConfig:
 
     Attributes:
         root_path (Path): The root directory where all the data regarding data preparation will be stored.
-        train_csv_path (Path): Path for training csv information is stored. 
+        train_csv_path (Path): Path for training csv information is stored.
         test_csv_path (Path): Path for testing csv information is stored.
         train_images_path (Path): Path for where all the training images are stored.
         test_images_path (Path): Path for where all the testing images are stored.
-        train_output_image_path (Path): Path for where the training images will be stored after data manipulation. 
+        train_output_image_path (Path): Path for where the training images will be stored after data manipulation.
         validation_output_image_path (Path): Path for where the validation images will be stored after data manipulation.
         train_output_csv_path (Path): Path to save the training csv after data manipulation.
         validation_output_csv_path (Path): Path to save the validation csv after data manipulation.
@@ -58,3 +58,13 @@ class ParametersConfig:
 
     TEST_SIZE: float
     RANDOM_STATE: int
+
+
+@dataclass(frozen=True)
+class TrainerConfig:
+    model_root_dir: Path
+    trained_model_path: Path
+    IMAGE_SIZE: int
+    BATCH_SIZE: int
+    LEARNING_RATE: float
+    EPOCHS: int

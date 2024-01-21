@@ -66,3 +66,23 @@ class ConfigurationManager:
         )
 
         return get_data_preparation_config
+
+    def get_trainer_config(self) -> TrainerConfig:
+        # Get the config and hyper parameters for the model training
+        config = self.config.train
+        params = self.params
+
+        # Create directories for model
+        create_directories([config.model_root_dir])
+
+        # Create TrainerConfig object with relevant configuration parameters
+        trainer_config = TrainerConfig(
+            model_root_dir=config.model_root_dir,
+            trained_model_path=config.trained_model_path,
+            IMAGE_SIZE=params.IMAGE_SIZE,
+            BATCH_SIZE=params.BATCH_SIZE,
+            LEARNING_RATE=params.LEARNING_RATE,
+            EPOCHS=params.EPOCHS,
+        )
+
+        return trainer_config
